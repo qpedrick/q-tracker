@@ -84,18 +84,18 @@ while True:
 
         fig = px.line(df, x='timestamp', y='count', title="Queue History (Last 100)", markers=True)
         fig.update_layout(height=350, margin=dict(l=20, r=20, t=40, b=20))
-        chart_row.plotly_chart(fig, use_container_width=True)
+        chart_row.plotly_chart(fig, width='stretch', key=f"q_chart_{time.time()}")
 
         with raw_data_row:
             raw_data_row.empty()
-            st.dataframe(df.sort_values(by='timestamp', ascending=False).head(5), use_container_width=True)
+            st.dataframe(df.sort_values(by='timestamp', ascending=False).head(5), width='stretch')
 
     # 2. Update Live Image
     if os.path.exists(IMG_FILE):
         try:
             # We open as Image to avoid file lock issues
             image = Image.open(IMG_FILE)
-            image_placeholder.image(image, caption="Live Inference View (Updated on Log)", use_container_width=True)
+            image_placeholder.image(image, caption="Live Inference View (Updated on Log)", width='stretch')
         except Exception:
             pass # Image might be writing, skip this frame
 

@@ -14,10 +14,10 @@ IMG_FILE = "latest_debug.jpg"
 # 0,0 is Top-Left. 1280,720 is Bottom-Right.
 # Adjust these coordinates after looking at the Dashboard image!
 QUEUE_REGION = np.array([
-    [100, 100],  # Top Left
-    [1180, 100], # Top Right
-    [1180, 650], # Bottom Right
-    [100, 650]   # Bottom Left
+    [280, 200],   # Top Left (Near stove/fridge gap)
+    [850, 200],   # Top Right (Right side of black cabinet)
+    [1000, 720],  # Bottom Right (Floor near sink)
+    [100, 720]    # Bottom Left (Floor near stove)
 ])
 
 def init_db():
