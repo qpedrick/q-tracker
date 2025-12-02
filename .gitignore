@@ -1,0 +1,25 @@
+# Python Virtual Environment
+venv/
+env/
+*.pyc
+__pycache__/
+
+# Generated Model Files
+*.engine
+*.onnx
+*.pt
+*.whl
+
+# Runtime Data
+queue_metrics.db
+latest_debug.jpg
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Files
+.DS_Store
+Thumbs.db
