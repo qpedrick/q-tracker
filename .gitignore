@@ -19,6 +19,7 @@ latest_debug.jpg
 .idea/
 *.swp
 *.swo
+notes.md
 
 # OS Files
 .DS_Store
